@@ -121,6 +121,29 @@ change log.
 ## Change log
 
 - 2026-10-14: registered.
+- 2026-10-14, before any run, from schema only: `claude-sonnet-4.5_new_v2_4runs` uses the
+  OpenHands SDK layout (no `llm_completions/`); a separate extractor (`extract_bai_v2.py`)
+  reads per-call `token_usages[]` and `costs[]` from each run's `base_state.json` and labels
+  from `logs/run_evaluation/.../report.json`. Seen while checking it: one task's two runs
+  have 69 and 71 calls with nonzero cost; no token or cost value printed. Runs whose
+  directory ends `run3` (no underscore) are parsed as run 3.
+- 2026-10-14, before any run, rules fixed in `analyze.py` that PLAN.md left open:
+  (a) Part B uses per-call `cost` unless > 5% of an archive's runs have zero cost, then
+  total tokens (recorded per archive); (b) B2 public model = cell mean of fit tasks at the
+  most specific feature cell with >= 5 fit tasks, falling back to coarser cells, then the
+  grand mean; Bai features (repo, difficulty, statement-length decile), own sets (repo,
+  first-prompt-length decile); (c) B3 "actual" = mean of the buyer's 1-3 current runs.
+  Smoke on synthetic data only: ICC recovers 0.81 for a true 0.80; tau_b gives +1/-1 on
+  ordered input; the market gives 51% uptake at p = 1.00 x mean with no private
+  information and 0.6% uptake at p = 27 x mean with strong private information.
+- 2026-10-14, before any run, from the synthetic smoke only: H-B2 as written is invalid.
+  With NO private information a k = 1 buyer still declines about half the time (their one
+  earlier run is noise), so "uptake < 50%" would pass on pure noise. H-B2 is replaced by:
+  **median over groups of p* / pooled mean at lambda = 0.1 >= 1.25** (adverse selection
+  forces the fixed price at least 25% above average cost). Uptake is reported next to a
+  permutation null (runs shuffled across tasks within a group, seed 20261014), so the
+  reader sees how much of the drop is task knowledge rather than noise. Collapse
+  (uptake < 20%) still reported.
 
 ## Publishing
 

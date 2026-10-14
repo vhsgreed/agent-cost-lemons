@@ -238,6 +238,12 @@ def part_b_group(task_runs_lin, feats, rng):
     out["public_r2"] = r2
     out["private_share"] = out["icc"] * (1 - min(max(r2, 0.0), 1.0))
     runs = list(multi.values())
+    # permutation null: shuffle runs across tasks so the buyer's earlier run says nothing about the task
+    allr = np.concatenate(runs); prng = np.random.default_rng(SEED); perm = prng.permutation(allr)
+    null, j = [], 0
+    for r in runs:
+        null.append(perm[j:j + len(r)]); j += len(r)
+    out["null_lam0.1"] = dict(zip(("uptake", "p_over_mean"), market(null, 0.1)))
     for lam in LAMBDAS:
         u, p = market(runs, lam); uo, po = market(runs, lam, oracle=True)
         out[f"lam{lam}"] = {"uptake": u, "p_over_mean": p, "oracle_uptake": uo, "oracle_p_over_mean": po}
@@ -285,8 +291,11 @@ def part_b(bai, meta, rng, complete):
         if not gs:
             return None
         icc = float(np.median([v["icc"] for v in gs])); up = float(np.median([v["lam0.1"]["uptake"] for v in gs]))
+        pm = float(np.median([v["lam0.1"]["p_over_mean"] if v["lam0.1"]["p_over_mean"] is not None else np.inf for v in gs]))
+        nu = float(np.median([v["null_lam0.1"]["uptake"] for v in gs]))
         return {"groups": len(gs), "median_icc": icc, "H_B1": icc >= 0.5,
-                "median_uptake_lam0.1": up, "H_B2": up < 0.5,
+                "median_uptake_lam0.1": up, "median_null_uptake_lam0.1": nu,
+                "median_p_over_mean_lam0.1": pm, "H_B2": pm >= 1.25,
                 "collapsed_groups_lam0.1": sum(1 for v in gs if v["lam0.1"]["uptake"] < 0.2)}
     out["score_bai"] = score(out["bai"]); out["score_own"] = score(out["own"])
     return out
