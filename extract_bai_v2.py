@@ -33,7 +33,7 @@ def rows_from_state(d, run, inst):
 def main():
     dst = os.path.join(OUT, f"bai_calls_{NAME}.jsonl.gz")
     url = f"https://huggingface.co/datasets/{REPO}/resolve/{REV}/{NAME}.tar.gz"
-    t0, done, n, mism = time.time(), set(), 0, 0
+    t0, done, n, mism, bad_nested = time.time(), set(), 0, 0, 0
     resolved = {}
     with urllib.request.urlopen(url, timeout=120) as resp, gzip.open(dst, "wt") as out, \
             tarfile.open(fileobj=resp, mode="r|gz") as tar:
@@ -50,10 +50,13 @@ def main():
             if b:
                 states.append((b["run"], b["inst"], tar.extractfile(m).read()))
             elif nt:
-                inner = tarfile.open(fileobj=io.BytesIO(tar.extractfile(m).read()), mode="r:gz")
-                for im in inner:
-                    if im.isfile() and im.name.endswith("base_state.json"):
-                        states.append((nt["run"], nt["inst"], inner.extractfile(im).read()))
+                try:
+                    inner = tarfile.open(fileobj=io.BytesIO(tar.extractfile(m).read()), mode="r:*")
+                    for im in inner:
+                        if im.isfile() and im.name.endswith("base_state.json"):
+                            states.append((nt["run"], nt["inst"], inner.extractfile(im).read()))
+                except (tarfile.TarError, EOFError, OSError):
+                    bad_nested += 1
             for run, inst, raw in states:
                 if (run, inst) in done:
                     continue
@@ -69,6 +72,7 @@ def main():
         json.dump({"resolved_ids": sorted(i for i, v in d.items() if v), "completed_ids": sorted(d)},
                   open(os.path.join(OUT, f"bai_report_{NAME}_{run}.json"), "w"))
     open(dst + ".done", "w").write(json.dumps({"runs": len(done), "calls": n, "cost_len_mismatch": mism,
+                                                "unreadable_nested_tars": bad_nested,
                                                 "secs": round(time.time() - t0)}))
     print(f"{NAME}: DONE {len(done)} runs, {n} calls, {mism} cost/usage length mismatches", flush=True)
 
