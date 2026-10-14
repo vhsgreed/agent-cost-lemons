@@ -145,6 +145,57 @@ change log.
   reader sees how much of the drop is task knowledge rather than noise. Collapse
   (uptake < 20%) still reported.
 
+## Results (one look, 2026-10-14; results.out / results.json)
+
+Registered run: `analyze.py`, 28 s, exit 0. Archives with >= 450 tasks x 4 runs: 8.
+`claude-sonnet-4.5_new_v2_4runs` has 177 complete tasks (its run 4 covers 177 tasks), so by the
+completeness rule it is excluded and Sonnet 4.5 = `claude-sonnet-4.5_4runs` only. 3,993
+(model, task) cells; every run has a resolve label.
+
+### Part A (registered verdicts)
+
+| Claim | Paper (v3) | Ours | Verdict |
+|---|---|---|---|
+| A1 median max/min over 4 runs | ~2x | 2.16 | REPRODUCED |
+| A2 max max/min | up to 30x | 1,380x (6.4% of cells > 10x) | NOT REPRODUCED |
+| A3 Kendall tau_b difficulty vs tokens | 0.32 | 0.21 (per model 0.23-0.32) | NOT REPRODUCED |
+| A4 easy above hard mean / hard below easy mean | 6.7% / 11.1% | 12.1% / 31.2% | NOT REPRODUCED |
+| A5 MaxCost minus MinCost resolve rate < 0 | "no higher accuracy" | +0.038 [0.026, 0.051]; 2/8 models negative | NOT REPRODUCED |
+| A6 Kimi, Sonnet 4.5 minus GPT-5 > 1.5M tokens | > 1.5M | +2.25M, +3.16M (496 tasks) | REPRODUCED |
+
+Registered overall: 2/6, NOT REPRODUCED.
+
+### Part A, exploratory (after the look; diag.py; not registered)
+
+- A2: the extreme ratios come from runs that ended after 1-2 LLM calls (e.g. Gemini on
+  matplotlib-20826: 8,624 tokens in 1 call vs 11.9M in 212). 55 of 3,993 cells have a
+  cheapest run of <= 3 calls. Dropping cells whose cheapest run has <= 10 calls: max 59x,
+  3.6% > 10x. "Up to 30x" holds only with some unstated filter; still not 30x with ours.
+- A3/A4: the paper does not state the unit. With one value per task (mean over the 8
+  models, 493 tasks present in all): tau_b 0.318, 7.8%, 11.4%, all within tolerance. Our
+  registered unit (pooled model x task) was a wrong guess at their unit, not a
+  disagreement with their data.
+- A5: the registered test encoded the abstract's wording; the body says "accuracy
+  increases modestly from MinCost to LowerCost, but then saturates". Ours by cost rank:
+  0.585 / 0.635 / 0.633 / 0.623. That matches the body. The abstract's "does not translate
+  into higher accuracy" overstates it: MaxCost is 3.8 points above MinCost.
+- Summary: the data reproduces the paper's figures once the unit and wording are read
+  from the body. One real gap remains (A2: 30x vs 59-1,380x depending on filtering).
+
+### Part B (registered)
+
+| | Groups | Median ICC (between-task share) | H-B1 (>= 0.5) | Median p*/mean, lambda 0.1 | Shuffled null | H-B2 (>= 1.25) | Uptake (null) | Collapsed (< 20%) |
+|---|---|---|---|---|---|---|---|---|
+| Bai, 8 models | 8 | 0.501 | PASS (by 0.001) | 1.94 | ~1.00 | PASS | 12% (40%) | 7/8 |
+| Own sets | 14 | 0.62 | PASS | 1.40 | ~1.00 | PASS | 27% (45%) | 4/14 |
+
+- Public features explain little of the between-task part (out-of-sample R^2 of task mean:
+  Bai -0.02 to 0.18, own -0.13 to 0.39), so private share = 0.29-0.59 (Bai), 0.24-0.69 (own).
+- A buyer with ONE earlier run of the same task already forces the break-even fixed
+  price to 1.3-2.2x average cost (Bai 1.34-2.19). With perfect knowledge of their task
+  (oracle) uptake is ~1% at 2.5-7.2x: the market unravels.
+- H-B1 passes by 0.001 on Bai; read it as "about half", not "most".
+
 ## Publishing
 
 1. Journal article on agentrecourse.org with PLAN.md, code and aggregate tables linked.

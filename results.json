@@ -1,0 +1,880 @@
+{
+ "A": {
+  "archives": {
+   "claude-sonnet-3.7_4runs": 500,
+   "claude-sonnet-4.5_4runs": 500,
+   "claude-sonnet-4.5_new_v2_4runs": 177,
+   "claude-sonnet-4_4runs": 500,
+   "gemini-3-pro-preview_4runs": 500,
+   "gpt-5_4runs": 498,
+   "gpt_5.2_4runs": 497,
+   "kimi-k2_4runs": 498,
+   "qwen3-coder-480b-a35b-instruct-4runs": 500
+  },
+  "complete": [
+   "claude-sonnet-3.7_4runs",
+   "claude-sonnet-4.5_4runs",
+   "claude-sonnet-4_4runs",
+   "gemini-3-pro-preview_4runs",
+   "gpt-5_4runs",
+   "gpt_5.2_4runs",
+   "kimi-k2_4runs",
+   "qwen3-coder-480b-a35b-instruct-4runs"
+  ],
+  "variants": [
+   [
+    "claude-sonnet-3.7_4runs",
+    "claude-sonnet-4_4runs",
+    "gemini-3-pro-preview_4runs",
+    "gpt-5_4runs",
+    "gpt_5.2_4runs",
+    "kimi-k2_4runs",
+    "qwen3-coder-480b-a35b-instruct-4runs",
+    "claude-sonnet-4.5_4runs"
+   ]
+  ],
+  "variant_results": [
+   {
+    "models": [
+     "claude-sonnet-3.7_4runs",
+     "claude-sonnet-4_4runs",
+     "gemini-3-pro-preview_4runs",
+     "gpt-5_4runs",
+     "gpt_5.2_4runs",
+     "kimi-k2_4runs",
+     "qwen3-coder-480b-a35b-instruct-4runs",
+     "claude-sonnet-4.5_4runs"
+    ],
+    "A1_median_maxmin": 2.163880230759265,
+    "A1": true,
+    "A2_max_maxmin": 1380.0621521335806,
+    "A2": false,
+    "A2_share_above_10x": 0.0638617580766341,
+    "n_cells": 3993,
+    "A3_tau_b": 0.20566295255127282,
+    "A3": false,
+    "A3_per_model": {
+     "claude-sonnet-3.7_4runs": 0.28211445337318436,
+     "claude-sonnet-4_4runs": 0.2530026063565788,
+     "gemini-3-pro-preview_4runs": 0.22637319861388971,
+     "gpt-5_4runs": 0.2361620520535678,
+     "gpt_5.2_4runs": 0.2828578539508366,
+     "kimi-k2_4runs": 0.23715093408778795,
+     "qwen3-coder-480b-a35b-instruct-4runs": 0.32439286793537697,
+     "claude-sonnet-4.5_4runs": 0.3056213368088183
+    },
+    "A4_easy_above_hard_mean": 0.12064516129032259,
+    "A4_hard_below_easy_mean": 0.31197771587743733,
+    "A4": false,
+    "A5_per_model_max_minus_min": {
+     "claude-sonnet-3.7_4runs": -0.046,
+     "claude-sonnet-4_4runs": -0.022,
+     "gemini-3-pro-preview_4runs": 0.188,
+     "gpt-5_4runs": 0.06827309236947791,
+     "gpt_5.2_4runs": 0.09054325955734406,
+     "kimi-k2_4runs": 0.028112449799196786,
+     "qwen3-coder-480b-a35b-instruct-4runs": 0.0,
+     "claude-sonnet-4.5_4runs": 0.0
+    },
+    "A5_pooled": 0.03831705484598046,
+    "A5_ci95": [
+     0.025569998025766046,
+     0.050852021946674604
+    ],
+    "A5_models_negative": 2,
+    "A5": false
+   }
+  ],
+  "A6": {
+   "claude-sonnet-4.5_4runs": {
+    "tasks": 496,
+    "mean_tok": {
+     "gpt-5_4runs": 996982.4057459678,
+     "kimi-k2_4runs": 3243192.8019153224,
+     "claude-sonnet-4.5_4runs": 4157160.43296371
+    },
+    "kimi_minus_gpt5": 2246210.3961693547,
+    "sonnet_minus_gpt5": 3160178.027217742,
+    "pass": true
+   }
+  },
+  "claims": {
+   "A1": true,
+   "A2": false,
+   "A3": false,
+   "A4": false,
+   "A5": false,
+   "A6": true
+  },
+  "reproduced_count": "2/6",
+  "overall_reproduced": false
+ },
+ "B": {
+  "bai": {
+   "claude-sonnet-3.7_4runs": {
+    "tasks": 500,
+    "runs": 2000,
+    "icc": 0.5170157783234048,
+    "icc_ci90": [
+     0.4741107913701902,
+     0.5569553183884761
+    ],
+    "public_r2": 0.029323718119495856,
+    "private_share": 0.5018549533765175,
+    "null_lam0.1": {
+     "uptake": 0.272,
+     "p_over_mean": 1.0206885345891576
+    },
+    "lam0.0": {
+     "uptake": 0.11,
+     "p_over_mean": 1.964502205783687,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 7.156298814493095
+    },
+    "lam0.1": {
+     "uptake": 0.126,
+     "p_over_mean": 1.949314657260465,
+     "oracle_uptake": 0.006,
+     "oracle_p_over_mean": 6.800244309860832
+    },
+    "lam0.3": {
+     "uptake": 0.154,
+     "p_over_mean": 1.9068206295129906,
+     "oracle_uptake": 0.026,
+     "oracle_p_over_mean": 5.122929403166788
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "claude-sonnet-4.5_4runs": {
+    "tasks": 500,
+    "runs": 2000,
+    "icc": 0.6582915819342705,
+    "icc_ci90": [
+     0.6211103872643267,
+     0.689037382590168
+    ],
+    "public_r2": 0.10555275190759339,
+    "private_share": 0.5888070939035053,
+    "null_lam0.1": {
+     "uptake": 0.512,
+     "p_over_mean": 1.0002951284905828
+    },
+    "lam0.0": {
+     "uptake": 0.178,
+     "p_over_mean": 1.4070846809814177,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 2.712961686390074
+    },
+    "lam0.1": {
+     "uptake": 0.256,
+     "p_over_mean": 1.3440391585070182,
+     "oracle_uptake": 0.012,
+     "oracle_p_over_mean": 2.4859016745179843
+    },
+    "lam0.3": {
+     "uptake": 0.484,
+     "p_over_mean": 1.2072649606298924,
+     "oracle_uptake": 0.248,
+     "oracle_p_over_mean": 1.4947524438243724
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "claude-sonnet-4_4runs": {
+    "tasks": 500,
+    "runs": 2000,
+    "icc": 0.5786364609043926,
+    "icc_ci90": [
+     0.5377148471262252,
+     0.6195064176350757
+    ],
+    "public_r2": 0.07160375803756247,
+    "private_share": 0.537203915766083,
+    "null_lam0.1": {
+     "uptake": 0.412,
+     "p_over_mean": 0.9994777190282319
+    },
+    "lam0.0": {
+     "uptake": 0.078,
+     "p_over_mean": 1.9015729312641863,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 4.252066850308074
+    },
+    "lam0.1": {
+     "uptake": 0.13,
+     "p_over_mean": 1.710619600986062,
+     "oracle_uptake": 0.008,
+     "oracle_p_over_mean": 3.7937110326021073
+    },
+    "lam0.3": {
+     "uptake": 0.21,
+     "p_over_mean": 1.5635953462598244,
+     "oracle_uptake": 0.042,
+     "oracle_p_over_mean": 2.940507828687415
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "gemini-3-pro-preview_4runs": {
+    "tasks": 500,
+    "runs": 2000,
+    "icc": 0.33780041407807426,
+    "icc_ci90": [
+     0.28219108606785676,
+     0.3904506956521872
+    ],
+    "public_r2": 0.08406823575807576,
+    "private_share": 0.3094021292281831,
+    "null_lam0.1": {
+     "uptake": 0.404,
+     "p_over_mean": 0.9974902304276068
+    },
+    "lam0.0": {
+     "uptake": 0.104,
+     "p_over_mean": 1.945616240441131,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 7.195872098043915
+    },
+    "lam0.1": {
+     "uptake": 0.158,
+     "p_over_mean": 1.7752858625555519,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 7.195872098043915
+    },
+    "lam0.3": {
+     "uptake": 0.212,
+     "p_over_mean": 1.7006246634114712,
+     "oracle_uptake": 0.03,
+     "oracle_p_over_mean": 4.35511408140514
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "gpt-5_4runs": {
+    "tasks": 500,
+    "runs": 1998,
+    "icc": 0.320253847741144,
+    "icc_ci90": [
+     0.26665108904579443,
+     0.37860665571644436
+    ],
+    "public_r2": 0.09736328832769725,
+    "private_share": 0.28907288002546855,
+    "null_lam0.1": {
+     "uptake": 0.44,
+     "p_over_mean": 0.9744540822566449
+    },
+    "lam0.0": {
+     "uptake": 0.058,
+     "p_over_mean": 2.0685213236191617,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 3.9486392124512575
+    },
+    "lam0.1": {
+     "uptake": 0.078,
+     "p_over_mean": 1.9781395851816699,
+     "oracle_uptake": 0.014,
+     "oracle_p_over_mean": 3.516243166698426
+    },
+    "lam0.3": {
+     "uptake": 0.23,
+     "p_over_mean": 1.6336956742729483,
+     "oracle_uptake": 0.068,
+     "oracle_p_over_mean": 2.559022779691418
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "gpt_5.2_4runs": {
+    "tasks": 500,
+    "runs": 1997,
+    "icc": 0.4693790566437288,
+    "icc_ci90": [
+     0.4194315902057678,
+     0.5110253447388003
+    ],
+    "public_r2": 0.16588648455830735,
+    "private_share": 0.39151541501180603,
+    "null_lam0.1": {
+     "uptake": 0.388,
+     "p_over_mean": 1.0020984948392437
+    },
+    "lam0.0": {
+     "uptake": 0.066,
+     "p_over_mean": 2.3068611142591613,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 5.886975142361679
+    },
+    "lam0.1": {
+     "uptake": 0.102,
+     "p_over_mean": 2.111571982478463,
+     "oracle_uptake": 0.006,
+     "oracle_p_over_mean": 5.507842506595348
+    },
+    "lam0.3": {
+     "uptake": 0.172,
+     "p_over_mean": 1.8469986857320662,
+     "oracle_uptake": 0.04,
+     "oracle_p_over_mean": 3.9372490769540796
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "kimi-k2_4runs": {
+    "tasks": 500,
+    "runs": 1998,
+    "icc": 0.4844674411454091,
+    "icc_ci90": [
+     0.4453525192382587,
+     0.5230385638143673
+    ],
+    "public_r2": -0.01801411264076136,
+    "private_share": 0.4844674411454091,
+    "null_lam0.1": {
+     "uptake": 0.288,
+     "p_over_mean": 1.086031681486727
+    },
+    "lam0.0": {
+     "uptake": 0.11,
+     "p_over_mean": 1.8312580637797635,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 5.770700696440245
+    },
+    "lam0.1": {
+     "uptake": 0.116,
+     "p_over_mean": 1.9290306598084712,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 5.770700696440245
+    },
+    "lam0.3": {
+     "uptake": 0.162,
+     "p_over_mean": 1.832384815800197,
+     "oracle_uptake": 0.06,
+     "oracle_p_over_mean": 3.278417251832942
+    },
+    "cost_field": "cost",
+    "zero_cost_share": 0.0
+   },
+   "qwen3-coder-480b-a35b-instruct-4runs": {
+    "tasks": 500,
+    "runs": 2000,
+    "icc": 0.6495489302445314,
+    "icc_ci90": [
+     0.6165703380878119,
+     0.6808309010579461
+    ],
+    "public_r2": 0.1790364744608477,
+    "private_share": 0.5332559797837354,
+    "null_lam0.1": {
+     "uptake": 0.28,
+     "p_over_mean": 1.0240599515875688
+    },
+    "lam0.0": {
+     "uptake": 0.074,
+     "p_over_mean": 2.266853943182652,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 6.5984169909727095
+    },
+    "lam0.1": {
+     "uptake": 0.102,
+     "p_over_mean": 2.1946756969271064,
+     "oracle_uptake": 0.002,
+     "oracle_p_over_mean": 6.5984169909727095
+    },
+    "lam0.3": {
+     "uptake": 0.178,
+     "p_over_mean": 1.865580357809677,
+     "oracle_uptake": 0.028,
+     "oracle_p_over_mean": 3.955432413599449
+    },
+    "cost_field": "tok",
+    "zero_cost_share": 1.0
+   }
+  },
+  "own": {
+   "SWE-smith | claude-3-5-sonnet-20241022": {
+    "tasks": 845,
+    "runs": 5707,
+    "icc": 0.44467905731502255,
+    "icc_ci90": [
+     0.4131773092161075,
+     0.474385724342045
+    ],
+    "public_r2": 0.3917481554647403,
+    "private_share": 0.27047685683806294,
+    "null_lam0.1": {
+     "uptake": 0.2331360946745562,
+     "p_over_mean": 1.0453301854260606
+    },
+    "lam0.0": {
+     "uptake": 0.08165680473372781,
+     "p_over_mean": 2.9886505527021368,
+     "oracle_uptake": 0.001183431952662722,
+     "oracle_p_over_mean": 6.783723784299261
+    },
+    "lam0.1": {
+     "uptake": 0.08994082840236686,
+     "p_over_mean": 2.8975321542921995,
+     "oracle_uptake": 0.009467455621301775,
+     "oracle_p_over_mean": 6.207705900050163
+    },
+    "lam0.3": {
+     "uptake": 0.11005917159763313,
+     "p_over_mean": 2.73961034613107,
+     "oracle_uptake": 0.029585798816568046,
+     "oracle_p_over_mean": 5.361572344268618
+    }
+   },
+   "SWE-smith | claude-3-7-sonnet-20250219": {
+    "tasks": 2179,
+    "runs": 6563,
+    "icc": 0.7331082556900683,
+    "icc_ci90": [
+     0.7183369967069139,
+     0.7464871217774142
+    ],
+    "public_r2": 0.12705424847989244,
+    "private_share": 0.6399637372089618,
+    "null_lam0.1": {
+     "uptake": 0.36071592473611747,
+     "p_over_mean": 0.9852711118730219
+    },
+    "lam0.0": {
+     "uptake": 0.10876548875631023,
+     "p_over_mean": 2.2260469651191075,
+     "oracle_uptake": 0.0004589261128958238,
+     "oracle_p_over_mean": 5.6387620969972465
+    },
+    "lam0.1": {
+     "uptake": 0.13171179440110142,
+     "p_over_mean": 2.1834290245070984,
+     "oracle_uptake": 0.012391005048187242,
+     "oracle_p_over_mean": 4.340184207024326
+    },
+    "lam0.3": {
+     "uptake": 0.17485084901330886,
+     "p_over_mean": 2.0754702571996346,
+     "oracle_uptake": 0.08581918311151905,
+     "oracle_p_over_mean": 3.1996713281326383
+    }
+   },
+   "SWE-smith | gpt-4o-2024-08-06": {
+    "tasks": 211,
+    "runs": 528,
+    "icc": 0.49658282767624706,
+    "icc_ci90": [
+     0.4056106356431485,
+     0.5750356818061538
+    ],
+    "public_r2": -0.1275104985783997,
+    "private_share": 0.49658282767624706,
+    "null_lam0.1": {
+     "uptake": 0.32701421800947866,
+     "p_over_mean": 0.7750501175999203
+    },
+    "lam0.0": {
+     "uptake": 0.26540284360189575,
+     "p_over_mean": 1.5724464156176043,
+     "oracle_uptake": 0.004739336492890996,
+     "oracle_p_over_mean": 3.256721519432422
+    },
+    "lam0.1": {
+     "uptake": 0.27488151658767773,
+     "p_over_mean": 1.598781646848177,
+     "oracle_uptake": 0.14691943127962084,
+     "oracle_p_over_mean": 2.9479105679845663
+    },
+    "lam0.3": {
+     "uptake": 0.2938388625592417,
+     "p_over_mean": 1.6045126174788433,
+     "oracle_uptake": 0.1943127962085308,
+     "oracle_p_over_mean": 2.8409474872327105
+    }
+   },
+   "SWE-rebench-OH | PennyLaneAI/pennylane": {
+    "tasks": 64,
+    "runs": 657,
+    "icc": 0.6819405793103908,
+    "icc_ci90": [
+     0.5953863643426589,
+     0.7438998959114995
+    ],
+    "public_r2": 0.030846658942094263,
+    "private_share": 0.6609049908416289,
+    "null_lam0.1": {
+     "uptake": 0.453125,
+     "p_over_mean": 0.9670079406499168
+    },
+    "lam0.0": {
+     "uptake": 0.125,
+     "p_over_mean": 1.5303635222194691,
+     "oracle_uptake": 0.015625,
+     "oracle_p_over_mean": 1.8583857747085883
+    },
+    "lam0.1": {
+     "uptake": 0.15625,
+     "p_over_mean": 1.4768897784379553,
+     "oracle_uptake": 0.140625,
+     "oracle_p_over_mean": 1.5522560793456448
+    },
+    "lam0.3": {
+     "uptake": 0.40625,
+     "p_over_mean": 1.3151416531885254,
+     "oracle_uptake": 0.5625,
+     "oracle_p_over_mean": 1.270796872119174
+    }
+   },
+   "SWE-rebench-OH | conan-io/conan": {
+    "tasks": 67,
+    "runs": 692,
+    "icc": 0.681161121345783,
+    "icc_ci90": [
+     0.5888585488251182,
+     0.7441104497742084
+    ],
+    "public_r2": 0.04318890956010446,
+    "private_share": 0.6517425152801206,
+    "null_lam0.1": {
+     "uptake": 0.5074626865671642,
+     "p_over_mean": 0.9952828009614707
+    },
+    "lam0.0": {
+     "uptake": 0.208955223880597,
+     "p_over_mean": 1.426093252676336,
+     "oracle_uptake": 0.014925373134328358,
+     "oracle_p_over_mean": 2.048751274144776
+    },
+    "lam0.1": {
+     "uptake": 0.22388059701492538,
+     "p_over_mean": 1.4146249022945925,
+     "oracle_uptake": 0.08955223880597014,
+     "oracle_p_over_mean": 1.8030174144887265
+    },
+    "lam0.3": {
+     "uptake": 0.373134328358209,
+     "p_over_mean": 1.3041335469735165,
+     "oracle_uptake": 0.2835820895522388,
+     "oracle_p_over_mean": 1.5194523257760526
+    }
+   },
+   "SWE-rebench-OH | dask/dask": {
+    "tasks": 56,
+    "runs": 605,
+    "icc": 0.7033294066201631,
+    "icc_ci90": [
+     0.6280233679854214,
+     0.7551593734752167
+    ],
+    "public_r2": 0.02024796740349455,
+    "private_share": 0.6890884157209989,
+    "null_lam0.1": {
+     "uptake": 0.5714285714285714,
+     "p_over_mean": 1.012983350977014
+    },
+    "lam0.0": {
+     "uptake": 0.30357142857142855,
+     "p_over_mean": 1.3600363188749558,
+     "oracle_uptake": 0.017857142857142856,
+     "oracle_p_over_mean": 2.2077000692728714
+    },
+    "lam0.1": {
+     "uptake": 0.32142857142857145,
+     "p_over_mean": 1.3513620403742241,
+     "oracle_uptake": 0.03571428571428571,
+     "oracle_p_over_mean": 2.1899515620170362
+    },
+    "lam0.3": {
+     "uptake": 0.42857142857142855,
+     "p_over_mean": 1.2994676273360928,
+     "oracle_uptake": 0.4107142857142857,
+     "oracle_p_over_mean": 1.4231633409900764
+    }
+   },
+   "SWE-rebench-OH | iterative/dvc": {
+    "tasks": 68,
+    "runs": 846,
+    "icc": 0.6172283154671989,
+    "icc_ci90": [
+     0.5381842252825461,
+     0.6716813163281286
+    ],
+    "public_r2": -0.019024919001956464,
+    "private_share": 0.6172283154671989,
+    "null_lam0.1": {
+     "uptake": 0.5588235294117647,
+     "p_over_mean": 0.9654986288373892
+    },
+    "lam0.0": {
+     "uptake": 0.25,
+     "p_over_mean": 1.3625958852742361,
+     "oracle_uptake": 0.014705882352941176,
+     "oracle_p_over_mean": 1.8174669693003722
+    },
+    "lam0.1": {
+     "uptake": 0.35294117647058826,
+     "p_over_mean": 1.2796050277709963,
+     "oracle_uptake": 0.07352941176470588,
+     "oracle_p_over_mean": 1.6861327461734503
+    },
+    "lam0.3": {
+     "uptake": 0.4852941176470588,
+     "p_over_mean": 1.2025178653212385,
+     "oracle_uptake": 0.4264705882352941,
+     "oracle_p_over_mean": 1.3483035304189703
+    }
+   },
+   "SWE-rebench-OH | python-pillow/Pillow": {
+    "tasks": 126,
+    "runs": 1328,
+    "icc": 0.6172008406126496,
+    "icc_ci90": [
+     0.5578011004796201,
+     0.6673240499020436
+    ],
+    "public_r2": 0.039506253283087545,
+    "private_share": 0.5928175478768717,
+    "null_lam0.1": {
+     "uptake": 0.5634920634920635,
+     "p_over_mean": 1.00697749845781
+    },
+    "lam0.0": {
+     "uptake": 0.21428571428571427,
+     "p_over_mean": 1.4226503937364217,
+     "oracle_uptake": 0.007936507936507936,
+     "oracle_p_over_mean": 1.904384952264287
+    },
+    "lam0.1": {
+     "uptake": 0.25396825396825395,
+     "p_over_mean": 1.3884631830734528,
+     "oracle_uptake": 0.12698412698412698,
+     "oracle_p_over_mean": 1.62877960450217
+    },
+    "lam0.3": {
+     "uptake": 0.4126984126984127,
+     "p_over_mean": 1.281194591429871,
+     "oracle_uptake": 0.42857142857142855,
+     "oracle_p_over_mean": 1.3470287647671586
+    }
+   },
+   "SWE-rebench-OH | streamlink/streamlink": {
+    "tasks": 66,
+    "runs": 660,
+    "icc": 0.6380455311594098,
+    "icc_ci90": [
+     0.5674159886766834,
+     0.6879878027354852
+    ],
+    "public_r2": 0.05365249664824345,
+    "private_share": 0.6038127954374528,
+    "null_lam0.1": {
+     "uptake": 0.5303030303030303,
+     "p_over_mean": 1.0036375254515069
+    },
+    "lam0.0": {
+     "uptake": 0.22727272727272727,
+     "p_over_mean": 1.4239340399879787,
+     "oracle_uptake": 0.015151515151515152,
+     "oracle_p_over_mean": 2.103379754767756
+    },
+    "lam0.1": {
+     "uptake": 0.25757575757575757,
+     "p_over_mean": 1.4601818081345865,
+     "oracle_uptake": 0.045454545454545456,
+     "oracle_p_over_mean": 1.9181053176043095
+    },
+    "lam0.3": {
+     "uptake": 0.3181818181818182,
+     "p_over_mean": 1.4197341731276643,
+     "oracle_uptake": 0.3939393939393939,
+     "oracle_p_over_mean": 1.4222210624014484
+    }
+   },
+   "SWE-rebench-OH | tobymao/sqlglot": {
+    "tasks": 275,
+    "runs": 2678,
+    "icc": 0.5201598420727958,
+    "icc_ci90": [
+     0.4740720914468903,
+     0.560369163236278
+    ],
+    "public_r2": 0.000743818519630346,
+    "private_share": 0.519772937549094,
+    "null_lam0.1": {
+     "uptake": 0.5490909090909091,
+     "p_over_mean": 0.9954531316640929
+    },
+    "lam0.0": {
+     "uptake": 0.31636363636363635,
+     "p_over_mean": 1.2275532228855757,
+     "oracle_uptake": 0.0036363636363636364,
+     "oracle_p_over_mean": 2.0765075068949534
+    },
+    "lam0.1": {
+     "uptake": 0.39636363636363636,
+     "p_over_mean": 1.200747318609498,
+     "oracle_uptake": 0.08727272727272728,
+     "oracle_p_over_mean": 1.5991281251136586
+    },
+    "lam0.3": {
+     "uptake": 0.5309090909090909,
+     "p_over_mean": 1.1746860166636954,
+     "oracle_uptake": 0.5745454545454546,
+     "oracle_p_over_mean": 1.2085434687396392
+    }
+   },
+   "SWE-rebench-OH | tox-dev/tox": {
+    "tasks": 54,
+    "runs": 606,
+    "icc": 0.6852452144354348,
+    "icc_ci90": [
+     0.590530236837125,
+     0.748111104482494
+    ],
+    "public_r2": 0.0045694237080705635,
+    "private_share": 0.6821140387067517,
+    "null_lam0.1": {
+     "uptake": 0.3888888888888889,
+     "p_over_mean": 0.9734569202141842
+    },
+    "lam0.0": {
+     "uptake": 0.07407407407407407,
+     "p_over_mean": 1.7215419268275112,
+     "oracle_uptake": 0.018518518518518517,
+     "oracle_p_over_mean": 2.036112287746025
+    },
+    "lam0.1": {
+     "uptake": 0.12962962962962962,
+     "p_over_mean": 1.7319292540383233,
+     "oracle_uptake": 0.09259259259259259,
+     "oracle_p_over_mean": 1.8757284419141615
+    },
+    "lam0.3": {
+     "uptake": 0.18518518518518517,
+     "p_over_mean": 1.6050106058165283,
+     "oracle_uptake": 0.3888888888888889,
+     "oracle_p_over_mean": 1.433480374598938
+    }
+   },
+   "SWE-agent | swe-agent-llama-405b": {
+    "tasks": 100,
+    "runs": 1191,
+    "icc": 0.28589788275309175,
+    "icc_ci90": [
+     0.22012520408834807,
+     0.345752469913736
+    ],
+    "public_r2": 0.028066097536973644,
+    "private_share": 0.27787384489012923,
+    "null_lam0.1": {
+     "uptake": 0.29,
+     "p_over_mean": 1.0430567163052684
+    },
+    "lam0.0": {
+     "uptake": 0.24,
+     "p_over_mean": 1.3259017410366691,
+     "oracle_uptake": 0.01,
+     "oracle_p_over_mean": 3.381870828507262
+    },
+    "lam0.1": {
+     "uptake": 0.31,
+     "p_over_mean": 1.3094000888712605,
+     "oracle_uptake": 0.01,
+     "oracle_p_over_mean": 3.381870828507262
+    },
+    "lam0.3": {
+     "uptake": 0.41,
+     "p_over_mean": 1.2874361160407457,
+     "oracle_uptake": 0.24,
+     "oracle_p_over_mean": 1.854125990517512
+    }
+   },
+   "SWE-agent | swe-agent-llama-70b": {
+    "tasks": 3581,
+    "runs": 74782,
+    "icc": 0.2531266047172335,
+    "icc_ci90": [
+     0.24248073892514685,
+     0.2624320149412642
+    ],
+    "public_r2": 0.05977370552609185,
+    "private_share": 0.23799628958604616,
+    "null_lam0.1": {
+     "uptake": 0.30578050823792235,
+     "p_over_mean": 0.9559545088025221
+    },
+    "lam0.0": {
+     "uptake": 0.2594247416922647,
+     "p_over_mean": 1.342107685803212,
+     "oracle_uptake": 0.00027925160569673273,
+     "oracle_p_over_mean": 8.494361763212972
+    },
+    "lam0.1": {
+     "uptake": 0.287349902261938,
+     "p_over_mean": 1.3337157124161694,
+     "oracle_uptake": 0.0005585032113934655,
+     "oracle_p_over_mean": 7.911074692097273
+    },
+    "lam0.3": {
+     "uptake": 0.32532812063669364,
+     "p_over_mean": 1.3120293805978804,
+     "oracle_uptake": 0.04747277296844457,
+     "oracle_p_over_mean": 3.0831473978159876
+    }
+   },
+   "SWE-agent | swe-agent-llama-8b": {
+    "tasks": 528,
+    "runs": 4052,
+    "icc": 0.24517048884675452,
+    "icc_ci90": [
+     0.20820861672628466,
+     0.28233715815046895
+    ],
+    "public_r2": -0.018866352692674004,
+    "private_share": 0.24517048884675452,
+    "null_lam0.1": {
+     "uptake": 0.4375,
+     "p_over_mean": 0.9564168912796736
+    },
+    "lam0.0": {
+     "uptake": 0.32575757575757575,
+     "p_over_mean": 1.2220872975693213,
+     "oracle_uptake": 0.001893939393939394,
+     "oracle_p_over_mean": 3.7681612000686435
+    },
+    "lam0.1": {
+     "uptake": 0.3693181818181818,
+     "p_over_mean": 1.206340903367542,
+     "oracle_uptake": 0.007575757575757576,
+     "oracle_p_over_mean": 3.5616381221490103
+    },
+    "lam0.3": {
+     "uptake": 0.4412878787878788,
+     "p_over_mean": 1.1940980934818346,
+     "oracle_uptake": 0.14393939393939395,
+     "oracle_p_over_mean": 2.2049600508559464
+    }
+   }
+  },
+  "score_bai": {
+   "groups": 8,
+   "median_icc": 0.500741609734407,
+   "H_B1": true,
+   "median_uptake_lam0.1": 0.121,
+   "median_null_uptake_lam0.1": 0.396,
+   "median_p_over_mean_lam0.1": 1.939172658534468,
+   "H_B2": true,
+   "collapsed_groups_lam0.1": 7
+  },
+  "score_own": {
+   "groups": 14,
+   "median_icc": 0.6172145780399243,
+   "H_B1": true,
+   "median_uptake_lam0.1": 0.2662286370817176,
+   "median_null_uptake_lam0.1": 0.4453125,
+   "median_p_over_mean_lam0.1": 1.4015440426840227,
+   "H_B2": true,
+   "collapsed_groups_lam0.1": 4
+  }
+ }
+}

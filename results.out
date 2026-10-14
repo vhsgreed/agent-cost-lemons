@@ -1,0 +1,32 @@
+{
+ "A_claims": {
+  "A1": true,
+  "A2": false,
+  "A3": false,
+  "A4": false,
+  "A5": false,
+  "A6": true
+ },
+ "A_reproduced": "2/6",
+ "A_overall": false,
+ "B_bai": {
+  "groups": 8,
+  "median_icc": 0.500741609734407,
+  "H_B1": true,
+  "median_uptake_lam0.1": 0.121,
+  "median_null_uptake_lam0.1": 0.396,
+  "median_p_over_mean_lam0.1": 1.939172658534468,
+  "H_B2": true,
+  "collapsed_groups_lam0.1": 7
+ },
+ "B_own": {
+  "groups": 14,
+  "median_icc": 0.6172145780399243,
+  "H_B1": true,
+  "median_uptake_lam0.1": 0.2662286370817176,
+  "median_null_uptake_lam0.1": 0.4453125,
+  "median_p_over_mean_lam0.1": 1.4015440426840227,
+  "H_B2": true,
+  "collapsed_groups_lam0.1": 4
+ }
+}
