@@ -3,3 +3,4 @@ data/bai_calls_*
 data/fetch_*.log
 __pycache__/
 *.pkl
+data/bai_report_*
