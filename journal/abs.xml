@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/mh5zmrk3G8D1so9mIs6+/d3YSqU</id>
+  <title>arXiv Query: search_query=&amp;id_list=2505.21627,2510.05181,2504.04715,2609.40070,2609.40098&amp;start=0&amp;max_results=5</title>
+  <updated>2026-10-15T10:53:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=5&amp;id_list=2505.21627,2510.05181,2504.04715,2609.40070,2609.40098" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2504.04715v2</id>
+    <title>Are You Getting What You Pay For? Auditing Model Substitution in LLM APIs</title>
+    <updated>2025-09-29T02:54:38Z</updated>
+    <link href="https://arxiv.org/abs/2504.04715v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.04715v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Commercial Large Language Model (LLM) APIs create a fundamental trust problem: users pay for specific models but have no guarantee that providers deliver them faithfully. Providers may covertly substitute cheaper alternatives (e.g., quantized versions, smaller models) to reduce costs while maintaining advertised pricing. We formalize this model substitution problem and systematically evaluate detection methods under realistic adversarial conditions. Our empirical analysis reveals that software-only methods are fundamentally unreliable: statistical tests on text outputs are query-intensive and fail against subtle substitutions, while methods using log probabilities are defeated by inherent inference nondeterminism in production environments. We argue that this verification gap can be more effectively closed with hardware-level security. We propose and evaluate the use of Trusted Execution Environments (TEEs) as one practical and robust solution. Our findings demonstrate that TEEs can provide provable cryptographic guarantees of model integrity with only a modest performance overhead, offering a clear and actionable path to ensure users get what they pay for. Code is available at https://github.com/sunblaze-ucb/llm-api-audit</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-07T03:57:41Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Will Cai</name>
+    </author>
+    <author>
+      <name>Tianneng Shi</name>
+    </author>
+    <author>
+      <name>Xuandong Zhao</name>
+    </author>
+    <author>
+      <name>Dawn Song</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.21627v4</id>
+    <title>Is Your LLM Overcharging You? Tokenization, Transparency, and Incentives</title>
+    <updated>2026-05-28T12:43:49Z</updated>
+    <link href="https://arxiv.org/abs/2505.21627v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.21627v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-of-the-art large language models require specialized hardware and substantial energy to operate. As a consequence, cloud-based services that provide access to large language models have become very popular. In these services, the price users pay for an output provided by a model depends on the number of tokens the model uses to generate it: they pay a fixed price per token. In this work, we show that this pricing mechanism creates a financial incentive for providers to strategize and misreport the (number of) tokens a model used to generate an output, and users cannot prove, or even know, whether a provider is overcharging them. However, we also show that, if an unfaithful provider is obliged to be transparent about the generative process used by the model, misreporting optimally without raising suspicion is hard. Nevertheless, as a proof-of-concept, we develop an efficient heuristic algorithm that allows providers to significantly overcharge users without raising suspicion. Crucially, we demonstrate that the cost of running the algorithm is lower than the additional revenue from overcharging users, highlighting the vulnerability of users under the current pay-per-token pricing mechanism. Further, we show that, to eliminate the financial incentive to strategize, a pricing mechanism must price tokens linearly on their character count. While this makes a provider's profit margin vary across tokens, we introduce a simple prescription under which the provider who adopts such an incentive-compatible pricing mechanism can maintain the average profit margin they had under the pay-per-token pricing mechanism. Along the way, to illustrate and complement our theoretical results, we conduct experiments with several large language models from the $\texttt{Llama}$, $\texttt{Gemma}$ and $\texttt{Ministral}$ families, and input prompts from the LMSYS Chatbot Arena platform.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-27T18:02:12Z</published>
+    <arxiv:comment>Selected as an oral presentation at ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Ander Artola Velasco</name>
+    </author>
+    <author>
+      <name>Stratis Tsirtsis</name>
+    </author>
+    <author>
+      <name>Nastaran Okati</name>
+    </author>
+    <author>
+      <name>Manuel Gomez-Rodriguez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.05181v2</id>
+    <title>Auditing Pay-Per-Token in Large Language Models</title>
+    <updated>2026-03-23T16:07:13Z</updated>
+    <link href="https://arxiv.org/abs/2510.05181v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.05181v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Millions of users rely on a market of cloud-based services to obtain access to state-of-the-art large language models. However, it has been very recently shown that the de facto pay-per-token pricing mechanism used by providers creates a financial incentive for them to strategize and misreport the (number of) tokens a model used to generate an output. In this paper, we develop an auditing framework based on martingale theory that enables a trusted third-party auditor who sequentially queries a provider to detect token misreporting. Crucially, we show that our framework is guaranteed to always detect token misreporting, regardless of the provider's (mis-)reporting policy, and not falsely flag a faithful provider as unfaithful with high probability. To validate our auditing framework, we conduct experiments across a wide range of (mis-)reporting policies using several large language models from the $\texttt{Llama}$, $\texttt{Gemma}$ and $\texttt{Ministral}$ families, and input prompts from a popular crowdsourced benchmarking platform. The results show that our framework detects an unfaithful provider after observing fewer than $\sim 70$ reported outputs, while maintaining the probability of falsely flagging a faithful provider below $α= 0.05$.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-05T17:47:16Z</published>
+    <arxiv:comment>AISTATS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ander Artola Velasco</name>
+    </author>
+    <author>
+      <name>Stratis Tsirtsis</name>
+    </author>
+    <author>
+      <name>Manuel Gomez-Rodriguez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.40098v2</id>
+    <title>Pricing Time, Not Just Tokens: Latency-Aware Mechanism Design for LLM Inference</title>
+    <updated>2026-10-02T13:47:26Z</updated>
+    <link href="https://arxiv.org/abs/2609.40098v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.40098v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The economic theory of LLM pricing treats tokens as a homogeneous commodity considering aggregate token count as the main features buyers and sellers consider. We model inference as a service market where buyers have three-dimensional private information - willingness-to-pay, task volume, and time preference - and utility depends on latency slack alongside token quantities.
+  Our main result is a separation theorem: discrete hardware tiers induce endogenous self-selection on time preferences, reducing three-dimensional screening to standard one-dimensional screening within each tier. We derive the cost structure from GPU inference physics - compute-bound prefill and bandwidth-bound decode - and characterize optimal tiered mechanisms via virtual-value techniques. Optimal per-task prices are volume-independent, providing theoretical grounding for flat per-token API pricing.
+  We verify the mechanism empirically by calibrating to 8-GPU clusters of H100 and B200 hardware. The separation theorem holds in 83% of 105 tested configurations overall, rising to 96% at economically relevant WTP scales. A seller adopting two-tier pricing under the optimal mechanism captures 26-66% higher profit than the best single-tier alternative, with gains driven by efficient cross-tier allocation in regimes where hardware costs are a significant fraction of per-request value.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T16:34:17Z</published>
+    <arxiv:comment>28 pages, 1 figure. Paper appears in the proceedings of the 27th ACM Conference on Economics &amp; Computation (EC'26)</arxiv:comment>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Ian McDougall</name>
+    </author>
+    <author>
+      <name>Karthikeyan Sankaralingam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.40070v1</id>
+    <title>Inference Auctions</title>
+    <updated>2026-09-30T16:24:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.40070v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.40070v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When inference demand exceeds available compute capacity, model providers must decide which requests should be served first. Users have different tolerances for delay from an LLM API, but current priority pricing schemes compress these differences into coarse fixed-price service tiers. We design an inference auction that allows users to bid for faster service. Our auction allocates priority in an economically efficient way without sacrificing latency, and we develop fast algorithms for implementing prices that incentivize truthful bidding. We also design an autobidding agent for our inference auction, where users specify an inference budget and the autobidder dynamically adjusts its bids over time to maximize user utility subject to the budget constraint. Experiments validate the practicality of our auction: it increases system welfare while maintaining the cache utilization and latency advantages of SGLang, a state-of-the-art inference serving framework.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T16:24:10Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Keegan Harris</name>
+    </author>
+    <author>
+      <name>Siddharth Prasad</name>
+    </author>
+    <author>
+      <name>Asher Trockman</name>
+    </author>
+    <author>
+      <name>Nika Haghtalab</name>
+    </author>
+    <author>
+      <name>Michael I. Jordan</name>
+    </author>
+  </entry>
+</feed>

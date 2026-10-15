@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://arxiv.org/abs/2604.22750",
+      "title": "Bai et al. 2026, How Do AI Agents Spend Your Money?",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "the most expensive runs double the token and monetary cost of the least expensive runs",
+          "added": "2026-10-15"
+        },
+        {
+          "text": "runs on the same task can differ by up to 30",
+          "added": "2026-10-15"
+        },
+        {
+          "text": "but then saturates in higher-cost settings",
+          "added": "2026-10-15"
+        },
+        {
+          "text": "consume over 1.5 million more tokens than GPT-5",
+          "added": "2026-10-15"
+        },
+        {
+          "text": "6.7% of tasks labeled as",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://huggingface.co/datasets/loong0814/openhands_trajectories",
+      "title": "Bai et al. released trajectories (HF)",
+      "accessed": "2026-10-15"
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/LongjuBai/agent_token_consumption_analysis/issues/2",
+      "title": "Our issue to the authors",
+      "accessed": "2026-10-15"
+    },
+    {
+      "id": 4,
+      "url": "https://doi.org/10.2307/1879431",
+      "title": "Akerlof 1970, The Market for Lemons",
+      "accessed": "2026-10-15"
+    },
+    {
+      "id": 5,
+      "url": "https://arxiv.org/abs/2505.21627",
+      "title": "Velasco et al., Is Your LLM Overcharging You?",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "creates a financial incentive for providers to strategize and misreport",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://arxiv.org/abs/2510.05181",
+      "title": "Velasco et al., Auditing Pay-Per-Token in LLMs",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "enables a trusted third-party auditor who sequentially queries a provider to detect token misreporting",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://arxiv.org/abs/2504.04715",
+      "title": "Cai et al., Auditing Model Substitution in LLM APIs",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "Providers may covertly substitute cheaper alternatives",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://arxiv.org/abs/2609.40070",
+      "title": "Harris et al., Inference Auctions",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "We design an inference auction that allows users to bid for faster service",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://arxiv.org/abs/2609.40098",
+      "title": "McDougall & Sankaralingam, Pricing Time, Not Just Tokens",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "providing theoretical grounding for flat per-token API pricing",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://thepricingconundrum.substack.com/p/outcome-based-pricing-as-insurance",
+      "title": "Dholakia, Outcome-Based Pricing as Insurance",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "is, in effect, *writing an insurance policy* for its customer",
+          "added": "2026-10-15"
+        },
+        {
+          "text": "vendors must screen customers, customize the price, verify outcomes, control costs",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://news.ycombinator.com/item?id=44713757",
+      "title": "Claude Code weekly rate limits (Anthropic announcement, HN)",
+      "accessed": "2026-10-15",
+      "quotes": [
+        {
+          "text": "affecting less than 5% of users based on current usage patterns",
+          "added": "2026-10-15"
+        },
+        {
+          "text": "running Claude 24/7 in the background",
+          "added": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://agentrecourse.org/journal/agent-run-cost",
+      "title": "Sundström 2026, What an AI coding-agent run will cost (v1.5)",
+      "accessed": "2026-10-15"
+    },
+    {
+      "id": 13,
+      "url": "https://github.com/vhsgreed/agent-cost-lemons",
+      "title": "This study: code, registration, aggregates",
+      "accessed": "2026-10-15"
+    },
+    {
+      "id": 14,
+      "url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified",
+      "title": "SWE-bench Verified",
+      "accessed": "2026-10-15"
+    }
+  ]
+}
