@@ -113,17 +113,17 @@ Registration, change log, analysis code and aggregate results: github.com/vhsgre
 
 ## Sources
 
-[1] https://arxiv.org/abs/2604.22750: Bai et al. 2026, How Do AI Agents Spend Your Money?
-[2] https://huggingface.co/datasets/loong0814/openhands_trajectories: Bai et al. released trajectories (HF)
-[3] https://github.com/LongjuBai/agent_token_consumption_analysis/issues/2: Our issue to the authors
-[4] https://doi.org/10.2307/1879431: Akerlof 1970, The Market for Lemons
-[5] https://arxiv.org/abs/2505.21627: Velasco et al., Is Your LLM Overcharging You?
-[6] https://arxiv.org/abs/2510.05181: Velasco et al., Auditing Pay-Per-Token in LLMs
-[7] https://arxiv.org/abs/2504.04715: Cai et al., Auditing Model Substitution in LLM APIs
-[8] https://arxiv.org/abs/2609.40070: Harris et al., Inference Auctions
-[9] https://arxiv.org/abs/2609.40098: McDougall & Sankaralingam, Pricing Time, Not Just Tokens
-[10] https://thepricingconundrum.substack.com/p/outcome-based-pricing-as-insurance: Dholakia, Outcome-Based Pricing as Insurance
-[11] https://news.ycombinator.com/item?id=44713757: Claude Code weekly rate limits (Anthropic announcement, HN)
-[12] https://agentrecourse.org/journal/agent-run-cost: Sundström 2026, What an AI coding-agent run will cost (v1.5)
-[13] https://github.com/vhsgreed/agent-cost-lemons: This study: code, registration, aggregates
-[14] https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified: SWE-bench Verified
+[1] https://arxiv.org/abs/2604.22750 - Bai et al. 2026, How Do AI Agents Spend Your Money?
+[2] https://huggingface.co/datasets/loong0814/openhands_trajectories - Bai et al. released trajectories (HF)
+[3] https://github.com/LongjuBai/agent_token_consumption_analysis/issues/2 - Our issue to the authors
+[4] https://doi.org/10.2307/1879431 - Akerlof 1970, The Market for Lemons
+[5] https://arxiv.org/abs/2505.21627 - Velasco et al., Is Your LLM Overcharging You?
+[6] https://arxiv.org/abs/2510.05181 - Velasco et al., Auditing Pay-Per-Token in LLMs
+[7] https://arxiv.org/abs/2504.04715 - Cai et al., Auditing Model Substitution in LLM APIs
+[8] https://arxiv.org/abs/2609.40070 - Harris et al., Inference Auctions
+[9] https://arxiv.org/abs/2609.40098 - McDougall & Sankaralingam, Pricing Time, Not Just Tokens
+[10] https://thepricingconundrum.substack.com/p/outcome-based-pricing-as-insurance - Dholakia, Outcome-Based Pricing as Insurance
+[11] https://news.ycombinator.com/item?id=44713757 - Claude Code weekly rate limits (Anthropic announcement, HN)
+[12] https://agentrecourse.org/journal/agent-run-cost - Sundström 2026, What an AI coding-agent run will cost (v1.5)
+[13] https://github.com/vhsgreed/agent-cost-lemons - This study: code, registration, aggregates
+[14] https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified - SWE-bench Verified
